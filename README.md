@@ -1,8 +1,8 @@
-# 🎮 Arcade TTS
+# Arcade TTS
 
 A Twitch Channel Point TTS (Text-to-Speech) system powered by [Chatterbox](https://github.com/resemble-ai/chatterbox) voice cloning. Give your stream a unique voice that reads viewer messages with personality.
 
-## ✨ Features
+## Features
 
 - **Voice Cloning** — Uses Chatterbox-Turbo for high-quality voice synthesis
 - **Paralinguistic Tags** — Randomly injects `[sigh]`, `[laugh]`, `[chuckle]`, `[cough]` for personality
@@ -11,18 +11,18 @@ A Twitch Channel Point TTS (Text-to-Speech) system powered by [Chatterbox](https
 - **Multiple Voice Profiles** — Support for different voices (e.g., dry sardonic bot, yelling jumpscare)
 - **Cloud-Ready** — Dockerized for deployment to RunPod Serverless or similar
 
-## 🎬 Demo
+## Demo
 
 *Coming soon — link to Twitch clip*
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.11
 - NVIDIA GPU with CUDA support (for local use)
 - ~4GB VRAM minimum (RTX 3060 or better recommended)
 - [Streamer.bot](https://streamer.bot/) v1.0.3+
 
-## 🚀 Quick Start (Local)
+## Quick Start (Local)
 
 ### 1. Clone the Repository
 
@@ -83,7 +83,7 @@ curl "http://localhost:5000/speak?text=Hello%20world"
 
 Audio will be saved to `tts_output/latest_tts.wav`.
 
-## 🤖 Streamer.bot Setup
+## Streamer.bot Setup
 
 ### Create an Action
 
@@ -107,7 +107,7 @@ Audio will be saved to `tts_output/latest_tts.wav`.
 2. Enable "Require Viewer to Enter Text"
 3. Add trigger: Channel Point Reward Redemption → Your TTS Reward
 
-## 🔌 API Endpoints
+## API Endpoints
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
@@ -126,7 +126,7 @@ Audio will be saved to `tts_output/latest_tts.wav`.
 }
 ```
 
-## 🎭 Paralinguistic Tags
+## Paralinguistic Tags
 
 The server randomly injects 1-3 tags per message at random positions:
 
@@ -137,7 +137,7 @@ The server randomly injects 1-3 tags per message at random positions:
 
 Use `/speak_raw` to disable tag injection.
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ### Build Locally
 
@@ -155,7 +155,7 @@ docker-compose up
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for cloud deployment instructions.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 arcade-tts/
@@ -171,7 +171,7 @@ arcade-tts/
 └── tts_output/             # Generated audio (gitignored)
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 Edit `tts_server.py` to customize:
 
@@ -182,7 +182,7 @@ PORT = 5000                                  # Server port
 TAGS = ["[sigh]", "[laugh]", "[chuckle]", "[cough]"]  # Available tags
 ```
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### "CUDA not available"
 - Ensure NVIDIA drivers are installed
@@ -202,20 +202,20 @@ TAGS = ["[sigh]", "[laugh]", "[chuckle]", "[cough]"]  # Available tags
 - Close other GPU-intensive applications
 - Consider cloud deployment for streaming
 
-## 🙏 Credits
+## Credits
 
 - [Chatterbox](https://github.com/resemble-ai/chatterbox) by Resemble AI — The TTS engine
 - [Streamer.bot](https://streamer.bot/) — Stream automation
 - [CREMA-D Dataset](https://github.com/CheyneyComputerScience/CREMA-D) — Emotional voice samples
 
-## 📄 License
+## License
 
 MIT License — See [LICENSE](LICENSE) for details.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Please open an issue or PR.
 
 ---
 
-Made with ❤️ for the streaming community
+Made with care for the streaming community
