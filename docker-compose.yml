@@ -1,0 +1,29 @@
+# Arcade TTS - Docker Compose
+# For local testing with Docker
+
+version: '3.8'
+
+services:
+  arcade-tts:
+    build: .
+    container_name: arcade-tts
+    ports:
+      - "5000:5000"
+    volumes:
+      # Mount voices folder for easy voice swapping
+      - ./voices:/app/voices:ro
+      # Mount output folder to access generated audio
+      - ./tts_output:/app/tts_output
+    environment:
+      - PORT=5000
+      - HOST=0.0.0.0
+      - VOICE_REFERENCE=voices/default_voice.wav
+      - OUTPUT_FOLDER=tts_output
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
